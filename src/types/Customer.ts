@@ -1,4 +1,3 @@
-//DO NOT FORGET TO DELETE THIS BEFORE MERGING
 
 export type BaseCustomer = {
   name: string;

@@ -1,7 +1,6 @@
 import { PixQrCode } from "../types/PixQrCode";
 import { Refund } from "../types/Refund";
 import { User } from "../types/User";
-//DELETE THIS LATER
 import { Charge } from "../types/Charge";
 
 export interface DatabaseProvider {
@@ -15,7 +14,7 @@ export interface DatabaseProvider {
   deleteUserByUsername(username: string): void;
   createChargeRefund(chargeRefund: Omit<Refund, 'id'>): void;
   deleteRefundsByID(refund_correlationID: string): void;
-  //DELETE THIS LATER
+  clearTablesforTesting(): void;
   createCharge(charge: Charge): string;
   deleteCharge(id: string): { success: boolean; error?: string };
   getChargeByID(id: string): Charge | null;

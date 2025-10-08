@@ -82,7 +82,6 @@ export class BunSqliteProvider implements DatabaseProvider {
         )
     `);
 
-    //WIPE THIS TABLE BEFORE MERGING TOO
     this.db.run(`
         CREATE TABLE IF NOT EXISTS charges (
             id TEXT PRIMARY KEY,
@@ -195,7 +194,6 @@ export class BunSqliteProvider implements DatabaseProvider {
     this.db.query('DELETE FROM charges').run();
   }
 
-  //REMOVE EVERYTHING AFTER THIS LATER, THIS IS THE CHARGES OPERATIONS
   createCharge(charge: Charge): string {
     this.db.run(
       'INSERT INTO charges (id, correlationID, value, type, comment, expiresIn, expiresDate, customer, ensureSameTaxID, daysForDueDate, daysAfterDueDate, interests, fines, discountSettings, additionalInfo, enableCashbackPercentage, enableCashbackExclusivePercentage, subaccount, splits) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',

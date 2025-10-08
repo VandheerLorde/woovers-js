@@ -1,4 +1,3 @@
-//DO NOT FORGET TO DELETE THIS BEFORE MERGING
 import { CustomerWithEmail, CustomerWithPhone, CustomerWithTaxID } from "./Customer";
 
 export type Charge = {
